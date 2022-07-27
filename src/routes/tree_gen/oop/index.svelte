@@ -1,7 +1,6 @@
 <script lang="ts">
   import P5 from 'p5-svelte';
   import type { Sketch } from 'p5-svelte';
-  import { Branch } from './Branch';
   import { Tree } from './Tree';
   import { seasons, type Season } from './Seasons';
 
@@ -12,6 +11,7 @@
   let tree: Tree;
   let angle = Math.PI / 4;
 
+  // TODO Fix season indicator and selector
   $: currentSeason = tree?.seasonManager.getSeason() || '?';
 
   const sketch: Sketch = (p5) => {
